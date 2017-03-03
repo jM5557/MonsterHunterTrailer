@@ -1,0 +1,14 @@
+{{#games}}
+	{{#if even_pos}}
+		<div id = {{id}} class = "game" style = "
+			background: url('assets/images/backgrounds/{{ backgrounds }}') no-repeat center center fixed;
+			background-size: cover">
+	{{else}}
+		<div id = {{id}} class = "game" style = "
+			background: url('assets/images/backgrounds/{{ backgrounds }}') no-repeat center center;
+			background-size: cover">
+	{{/if}}
+			<h1>{{name}}</h1>
+			<iframe src="{{ trailer_url }}" frameborder="0" allowfullscreen></iframe>
+		</div>
+{{/games}}
