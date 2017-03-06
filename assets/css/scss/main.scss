@@ -3,6 +3,7 @@
 html, body {
 	height: 100%;
 	background-color: #444;
+	position: relative;
 }
 
 h1,
@@ -100,6 +101,7 @@ iframe {
 	left: 0;
 	height: 100%;
 	width: 200px;
+	left: -250px;
 	position: fixed;
 	z-index: 9999999;
 	background-color: #444;
@@ -108,6 +110,7 @@ iframe {
 	display: none;
 	text-align: center;
 	box-shadow: 5px 10px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+	transition: all 0.65s ease;
 
 	ul {
 		.menu_game {
@@ -138,6 +141,12 @@ iframe {
 	}
 }
 
+#sidebar.slide {
+	display: block;
+	left: 0;
+	transition: all 0.65s ease;
+}
+
 //mCustomScrollbar
 .mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
 	background-color: #FFF;
@@ -155,7 +164,7 @@ iframe {
 	margin-right: 0px;
 }
 
-
+//Responsive Media Queries
 @media only screen and (max-width: 1024px){
 	.game {
 		padding: 3.5em;

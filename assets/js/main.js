@@ -76,22 +76,22 @@ var games_list = {
 		backgrounds: "monster_hunter_xx.jpg",
 		trailer_url: "https://www.youtube.com/embed/MnpNGzNoOY0",
 		logo: "mh_xx_logo.png",
-	}]
+	}],
+
+	"get_even_games": function(){
+		for(var i = 0; i < games_list.games.length; i++)
+		{	
+			if(i%2 == 0)
+				games_list.games[i].even_pos = true;
+			games_list.games[i].id = i;
+		}
+	},
 }
 
-var get_even_games = function(){
-	for(var i = 0; i < games_list.games.length; i++)
-	{	
-		if(i%2 == 0)
-			games_list.games[i].even_pos = true;
-		games_list.games[i].id = i;
-	}
-}
-
-get_even_games();
+games_list.get_even_games();
 
 $(document).ready(function(){
 	$("#close_menu_btn, #open_menu_btn").click(function(){
-		$("#sidebar").toggle("slide");
+		document.getElementById('sidebar').classList.toggle("slide");
 	});
 });

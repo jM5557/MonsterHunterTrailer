@@ -48,8 +48,8 @@
 			var sidebar_template = Handlebars.templates['sidebar_menu'];
 			var sidebar_template_html = sidebar_template(games_list);
 
-			$("#games_wrapper").html(template_html);
-			$("#sidebar ul").html(sidebar_template_html);
+			document.getElementById("games_wrapper").innerHTML = template_html;
+			document.querySelector("#sidebar ul").innerHTML = sidebar_template_html;
 		</script>
 	</body>
 </html>
