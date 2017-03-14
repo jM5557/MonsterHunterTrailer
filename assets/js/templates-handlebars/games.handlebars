@@ -2,13 +2,18 @@
 	{{#if even_pos}}
 		<div id = {{id}} class = "game" style = "
 			background: url('assets/images/backgrounds/{{ backgrounds }}') no-repeat center center fixed;
-			background-size: cover">
+			background-size: cover;">
 	{{else}}
 		<div id = {{id}} class = "game" style = "
 			background: url('assets/images/backgrounds/{{ backgrounds }}') no-repeat center center;
 			background-size: cover">
 	{{/if}}
 			<h1>{{name}}</h1>
-			<iframe src="{{ trailer_url }}" frameborder="0" allowfullscreen></iframe>
+			
+			<div class = "video_container">
+			{{#videos}}
+				<iframe src="https://www.youtube.com/embed/{{video_id}}" frameborder="0" allowfullscreen></iframe>
+			{{/videos}}
+			</div>
 		</div>
 {{/games}}
