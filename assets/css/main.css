@@ -206,8 +206,8 @@ iframe, .video_container .el_container {
       font-size: 4.0em; }
 
   iframe, .video_container .el_container {
-    width: 480px;
-    height: 420px; } }
+    width: 480px !important;
+    height: 420px !important; } }
 @media only screen and (max-width: 900px) {
   .game {
     padding: 2em; }
@@ -215,7 +215,7 @@ iframe, .video_container .el_container {
       font-size: 3.5em; }
 
   iframe, .video_container .el_container {
-    width: 100%;
-    height: 400px; } }
+    width: 100% !important;
+    height: 400px !important; } }
 
 /*# sourceMappingURL=main.css.map */
