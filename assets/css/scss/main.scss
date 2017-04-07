@@ -59,6 +59,7 @@ iframe, .video_container .el_container {
 	text-align: center;
 	margin: 20px;
 	position: relative;
+	cursor: pointer;
 }
 
 .video_container .el_container:hover {
@@ -71,7 +72,6 @@ iframe, .video_container .el_container {
 	filter: blur(2px);
 	width: 100%;
 	height: 100%;
-	cursor: pointer;
 	transition: filter 0.35s ease;
 }
 
@@ -211,6 +211,6 @@ iframe, .video_container .el_container {
 
 	iframe, .video_container .el_container {
 		width: 100% !important;
-		height: auto !important;
+		height: 400px !important;
 	}
 }

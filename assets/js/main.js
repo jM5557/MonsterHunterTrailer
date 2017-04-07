@@ -162,12 +162,22 @@ var games_list = {
 games_list.get_even_games();
 
 $(document).ready(function(){
-	$(".video_container img:nth-of-type(1)").click(function(){
-		var vid_url = this.src.slice(23);
-		vid_url = vid_url.slice(0, vid_url.length - 14);
+	$(".video_container img").click(function(){
+		if(this.className == "vid-thumb"){
+			var vid_url = this.src.slice(23);
+			vid_url = vid_url.slice(0, vid_url.length - 14);
+			
+			$(this).siblings().remove();
+			$(this).replaceWith("<iframe src=\"https://www.youtube.com/embed/" + vid_url + "?autoplay=1\" frameborder=\"0\" allowfullscreen ></iframe>");
+		}
+		else
+		{
+			var vid_url = $(this).siblings()[0].src.slice(23);
+			vid_url = vid_url.slice(0, vid_url.length - 14);
 
-		$(this).siblings("img:nth-of-type(2)").remove();
-		$(this).replaceWith("<iframe src=\"https://www.youtube.com/embed/" + vid_url + "\" frameborder=\"0\" allowfullscreen></iframe>");
+			$(this).siblings().replaceWith("<iframe src=\"https://www.youtube.com/embed/" + vid_url + "?autoplay=1\" frameborder=\"0\" allowfullscreen ></iframe>");
+			$(this).remove();
+		}
 	});
 
 	$("#close_menu_btn, #open_menu_btn").click(function(){
