@@ -216,6 +216,6 @@ iframe, .video_container .el_container {
 
   iframe, .video_container .el_container {
     width: 100% !important;
-    height: 400px !important; } }
+    height: auto !important; } }
 
 /*# sourceMappingURL=main.css.map */
