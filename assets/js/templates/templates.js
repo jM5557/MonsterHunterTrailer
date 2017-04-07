@@ -29,9 +29,9 @@ templates['games'] = template({"1":function(container,depth0,helpers,partials,da
 },"6":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return "				<iframe src=\"https://www.youtube.com/embed/"
+  return "				<div class = \"el_container\">\r\n					<img src=\"https://i.ytimg.com/vi/"
     + container.escapeExpression(((helper = (helper = helpers.video_id || (depth0 != null ? depth0.video_id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"video_id","hash":{},"data":data}) : helper)))
-    + "\" frameborder=\"0\" allowfullscreen></iframe>\r\n";
+    + "/hqdefault.jpg\">\r\n					<img src = \"assets/images/decor/yt-icon-thumb.png\">\r\n				</div>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, options;
 

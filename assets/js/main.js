@@ -162,6 +162,13 @@ var games_list = {
 games_list.get_even_games();
 
 $(document).ready(function(){
+	$(".video_container img").click(function(){
+		var vid_url = this.src.slice(23);
+		vid_url = vid_url.slice(0, vid_url.length - 14);
+
+		$(this).replaceWith("<iframe src=\"https://www.youtube.com/embed/" + vid_url + "\" frameborder=\"0\" allowfullscreen></iframe>");
+	});
+
 	$("#close_menu_btn, #open_menu_btn").click(function(){
 		document.getElementById('sidebar').classList.toggle("slide");
 	});

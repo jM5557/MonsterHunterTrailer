@@ -12,7 +12,10 @@
 			
 			<div class = "video_container">
 			{{#videos}}
-				<iframe src="https://www.youtube.com/embed/{{video_id}}" frameborder="0" allowfullscreen></iframe>
+				<div class = "el_container">
+					<img src="https://i.ytimg.com/vi/{{video_id}}/hqdefault.jpg">
+					<img src = "assets/images/decor/yt-icon-thumb.png">
+				</div>
 			{{/videos}}
 			</div>
 		</div>
