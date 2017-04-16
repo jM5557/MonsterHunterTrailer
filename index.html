@@ -27,6 +27,7 @@
 	<body>
 		<section id = "sidebar">
 			<div id = "close_menu_btn">Close</div>
+			<button id = "close_menu_btn_scroll">Close</button>
 			<ul></ul>
 		</section>
 
@@ -35,6 +36,10 @@
 		</section>
 		<div class = "wrapper" id = "games_wrapper">
 		</div>
+
+		<button id = "scroll_top">
+			Back To Top
+		</button>
 
 		<script type = "text/javascript">
 			var compiledTemplate = Handlebars.templates['games'];
@@ -45,6 +50,22 @@
 
 			document.getElementById("games_wrapper").innerHTML = template_html;
 			document.querySelector("#sidebar ul").innerHTML = sidebar_template_html;
+
+			$(window).scroll(function() {
+			    if ($(this).scrollTop()) {
+			        $('#scroll_top').fadeIn();
+			    } else {
+			        $('#scroll_top').fadeOut();
+			    }
+			});
+
+			$('#sidebar').scroll(function() {
+			    if ($(this).scrollTop()) {
+			        $('#close_menu_btn_scroll').fadeIn();
+			    } else {
+			        $('#close_menu_btn_scroll').fadeOut();
+			    }
+			});
 		</script>
 	</body>
 </html>

@@ -180,7 +180,11 @@ $(document).ready(function(){
 		}
 	});
 
-	$("#close_menu_btn, #open_menu_btn").click(function(){
+	$("#close_menu_btn, #open_menu_btn, #close_menu_btn_scroll").click(function(){
 		document.getElementById('sidebar').classList.toggle("slide");
+	});
+
+	$("#scroll_top").click(function(){
+		$("html, body").animate({ scrollTop: "0px" });
 	});
 });
