@@ -1,0 +1,18 @@
+{{#games}}
+	{{#if even_pos}}
+		<div id = {{id}} class = "game">
+	{{else}}
+		<div id = {{id}} class = "game odd">
+	{{/if}}
+			<h1>{{name}}</h1>
+			
+			<div class = "video_container">
+			{{#videos}}
+				<div class = "el_container">
+					<input type = "hidden" value ="{{video_id}}">
+					<p>Trailer {{ id }}</p>
+				</div>
+			{{/videos}}
+			</div>
+		</div>
+{{/games}}

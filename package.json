@@ -1,0 +1,26 @@
+{
+  "name": "monster_hunter_trailers",
+  "version": "1.0.0",
+  "description": "A front-end interface for a collection of Monster Hunter game trailers per game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"hello, world\"",
+    "build": "\"\"C:/Program Files (x86)/GnuWin32/bin/make.exe\"\" build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jM5557/MonsterHunterTrailer.git"
+  },
+  "author": "Javier Minchala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jM5557/MonsterHunterTrailer/issues"
+  },
+  "homepage": "https://github.com/jM5557/MonsterHunterTrailer#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.3"
+  }
+}

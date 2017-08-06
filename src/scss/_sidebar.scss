@@ -1,0 +1,42 @@
+#sidebar {
+	flex-grow: 1;
+	flex-shrink: 0;
+	max-width: 300px;
+	display: flex;
+	flex-direction: column;
+	background-color: #444;
+	background: url($decor + 'sidebar_bg.jpg') repeat center center;
+	overflow-y: auto;
+	text-align: center;
+	transition: transform 0.65s ease;
+
+	ul {
+		.menu_game {
+			text-align: center;
+			border-top: solid thin #3e2e2e;
+			border-bottom: solid thin #625e5b;
+			padding: 15px;
+			cursor: pointer;
+
+			img {
+				max-width: 140px;
+			}
+		}
+
+		.menu_game:nth-of-type(1) {
+			border-top: solid thin #625e5b;
+		}
+	}
+
+	#close_menu_btn {
+		font-size: 1.90em;
+		cursor: pointer;
+		position: relative;
+		padding: 30px;
+		border-bottom: solid thin #3e2e2e;
+	}
+
+	#close_menu_btn:hover:before {
+		background-size: 90px auto;
+	}
+}
