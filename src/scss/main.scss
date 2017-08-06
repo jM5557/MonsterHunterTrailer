@@ -123,6 +123,36 @@ h1 {
 		}
 	}
 
+	#next, #prev {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 10px;
+		right: auto;
+		margin: auto;
+		height: 50px;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		text-align: center;
+		width: 50px;
+		font-size: 17pt;
+		cursor: pointer;
+		opacity: 1;
+
+		&.enabled {
+			opacity: 1;
+		}
+
+		&.disabled {
+			opacity: 0.45;
+		}
+	}
+
+	#next {
+		right: 10px;
+		left: auto;
+	}
+
 	iframe {
 		position: absolute;
 		top: 0; left: 0;
