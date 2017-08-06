@@ -48,16 +48,27 @@ table {
   border-spacing: 0; }
 
 #sidebar {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   max-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: #444;
   background: url("../images/decor/sidebar_bg.jpg") repeat center center;
   overflow-y: auto;
   text-align: center;
-  transition: transform 0.65s ease; }
+  -webkit-transition: -webkit-transform 0.65s ease;
+  transition: -webkit-transform 0.65s ease;
+  transition: transform 0.65s ease;
+  transition: transform 0.65s ease, -webkit-transform 0.65s ease; }
   #sidebar ul .menu_game {
     text-align: center;
     border-top: solid thin #3e2e2e;
@@ -101,7 +112,11 @@ h1 {
   font-size: 5.5em; }
 
 #flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: row;
+  -ms-flex-align: row;
   align-items: row;
   height: 100%; }
 
@@ -110,6 +125,7 @@ h1 {
   white-space: wrap;
   text-align: center;
   background-color: #514f4c;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   text-align: left;
   min-width: 0;
@@ -141,8 +157,15 @@ h1 {
       background: url("../images/decor/borderLine.png") repeat-x center center;
       background-size: auto 30px; }
   #games_wrapper .video_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     padding: 20px; }
     #games_wrapper .video_container .el_container {
@@ -170,6 +193,28 @@ h1 {
     cursor: pointer; }
     #video_overlay #close_video_modal:hover {
       color: red; }
+  #video_overlay #next, #video_overlay #prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: auto;
+    margin: auto;
+    height: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    width: 50px;
+    font-size: 17pt;
+    cursor: pointer;
+    opacity: 1; }
+    #video_overlay #next.enabled, #video_overlay #prev.enabled {
+      opacity: 1; }
+    #video_overlay #next.disabled, #video_overlay #prev.disabled {
+      opacity: 0.45; }
+  #video_overlay #next {
+    right: 10px;
+    left: auto; }
   #video_overlay iframe {
     position: absolute;
     top: 0;
