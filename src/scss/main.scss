@@ -17,19 +17,24 @@ body {
 	font-family: $f_normal;
 }
 
-h1,
+h1, h2, h3, h4, h5, h6
 #top_menu,
 #close_menu_btn,
 #close_menu_btn_scroll,
 #scroll_top {
 	font-family: $f_heavy;
 	color: white;
-	padding: 20px;
-	text-shadow: 2px 6px 3px rgba(0,0,0,0.3);
+	padding: 5px;
+	text-shadow: 2px 3px 3px rgba(0,0,0,0.3);
 }
 
 h1 {
-	font-size: 5.5em;
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 1.25em;
+	padding: 0px;
 }
 
 #flex-container {
@@ -41,22 +46,24 @@ h1 {
 #games_wrapper {
 	overflow-y: auto;
 	white-space: wrap;
-	text-align: center;
 	background-color: #514f4c;
 	flex-shrink: 0;
 	text-align: left;
 	min-width: 0;
-	width: calc(100% - 300px);
+	width: calc(100% - 240px);
 
 	.game {
 		background: url($bg + 'texture_bg_blue.jpg') repeat center center;
 		background-size: auto auto;
 		padding: 4rem;
+		position: relative;
+		z-index: 3;
 
 		&.odd {
 			background: url($bg + 'texture_bg.jpg') repeat center center;
 			background-size: auto auto;
 			position: relative;
+			z-index: 4;
 		}
 
 		&.odd::before {
@@ -98,6 +105,7 @@ h1 {
 				color: red;
 			}
 		}
+
 	}
 }
 
@@ -166,11 +174,176 @@ h1 {
 #scroll_top {
 	position: fixed;
 	bottom: 15px;
-	right: 30px;
+	right: 20px;
 	background-color: #8e8e8e;
 	background: url($decor + 'sidebar_bg.jpg') repeat center center;
 	background-size: auto auto;
 	border: none;
-	padding: 15px;
-	font-size: 1.5rem;
+	padding: 15px 15px 0px 15px;
+	font-size: 20pt;
+	z-index: 10;
+	cursor: pointer;
+}
+
+#hero-top {
+	background: url($bg + 'monster_hunter_xx.jpg') no-repeat center center;
+	background-size: cover;
+	padding: 20vw 0;
+	color: #fff;
+
+	@include opaqueOverlay(0.10);
+
+	h1 {
+		margin: 45px;
+		border-left: solid 4px #fff;
+	}
+
+	p {
+		margin-left: 45px;
+		line-height: 26px;
+	}
+}
+
+footer {
+	padding: 2.5rem 1.10rem;
+	background: url($bg + 'footer_bg.jpg') no-repeat center center;
+	background-size: cover;
+	color: #fff;
+
+	@include opaqueOverlay(0.45);
+	
+
+	#lists_container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	h2 {
+		padding: 10px 0px;
+		border-bottom: solid 3px #fff;
+	}
+
+	.list-wrapper {
+		padding: 0px 25px;
+		text-align: left;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+
+			li {
+				padding: 5px;
+			}
+		}
+	}
+
+	small {
+		display: block;
+		text-align: center;
+		font-size: 9pt;
+		padding-top: 35px;
+		line-height: 26px;
+	}
+}
+
+@media all and (max-width: 720px) {
+	h1 {
+		font-size: 2em;
+	}
+
+	#hero-top {
+		padding: 10vw 0vw 20vw 0vw;
+
+		h1, p {
+			margin-left: 20px;
+		}
+	}
+
+	#games_wrapper {
+		.game {
+			padding: 1.5rem 0.45rem;
+
+			h1 {
+				padding-left: 20px;
+			}
+
+			.video_container {
+				padding: 5px;
+
+				.el_container {
+					padding: 5px;
+					margin: 5px 5px 5px 25px;
+				}
+			}
+		}
+	}
+	
+
+	footer {
+		#lists_container {
+			flex-direction: column;
+		}
+
+		.list-wrapper {
+			margin-bottom: 20px;
+			flex-grow: 1;
+			flex-shrink: 0;
+		}
+
+		small {
+			padding: 1.10rem;
+		}
+	}
+
+}
+
+@media all and (max-width: 720px) and (orientation: portrait) {
+
+	#flex-container {
+		flex-direction: column;
+
+		#sidebar {
+			flex-direction: row;
+			max-width: 100%;
+
+			ul {
+				display: flex;
+				flex-direction: row;
+
+				li {
+					border: none;
+					border-left: solid thin #3e2e2e;
+					border-right: solid thin #625e5b;
+				}
+			}
+		}
+	}
+
+	#games_wrapper {
+		width: 100%;
+		flex-shrink: initial;
+	}
+
+	#sidebar {
+		max-height: 90px;
+
+		ul .menu_game img {
+			width: 80px;
+		}
+	}
+}
+
+@media all and (max-width: 720px) and (orientation: landscape) {
+	#games_wrapper {
+		width: calc(100% - 100px);
+	}
+
+	#sidebar {
+		max-width: 120px;
+
+		img {
+			width: 100px;
+		}
+	}
 }

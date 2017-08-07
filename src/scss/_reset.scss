@@ -46,3 +46,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* CUSTOM */
+
+a, a:hover, a:visited {
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	color: red;
+}

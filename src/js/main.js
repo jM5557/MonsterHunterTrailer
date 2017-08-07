@@ -147,6 +147,14 @@ var games_list = {
 
 		],
 		logo: "mh_xx_logo.png",
+	},
+	{
+		name: "Monster Hunter: World",
+		backgrounds: "monster_hunter_xx.jpg",
+		"videos": [
+			{ video_id: "Ro6r15wzp2o" },
+		],
+		logo: "mh_world_logo.png"
 	}],
 
 	setVideoID: function(){
@@ -172,11 +180,12 @@ $(document).ready(function(){
 	var sidebar_template = Handlebars.templates['sidebar_menu'];
 	var sidebar_template_html = sidebar_template(games_list);
 
-	document.getElementById("games_wrapper").innerHTML = template_html;
+	$("#games_wrapper").html(template_html);
+
 	document.querySelector("#sidebar ul").innerHTML = sidebar_template_html;
 
-	var isScrolledToTop = function () {
-		if ($(this).scrollTop()) {
+	var isScrolledToTop = function (t) {
+		if ($(t).scrollTop()) {
 	        $('#scroll_top').fadeIn();
 	    } else {
 	        $('#scroll_top').fadeOut();
@@ -184,8 +193,10 @@ $(document).ready(function(){
 	};
 
 	$("#games_wrapper").scroll(function() {
-	    isScrolledToTop();
+	    isScrolledToTop(this);
 	});
+
+	isScrolledToTop("#games_wrapper");
 
 	$('#sidebar').scroll(function() {
 	    if ($(this).scrollTop()) {
