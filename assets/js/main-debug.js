@@ -150,9 +150,11 @@ var games_list = {
 	},
 	{
 		name: "Monster Hunter: World",
-		backgrounds: "monster_hunter_xx.jpg",
+		backgrounds: "monster_hunter_world.jpg",
 		"videos": [
 			{ video_id: "Ro6r15wzp2o" },
+			{ video_id: "ULqY6yXn2S4" },
+			{ video_id: "TrZSAKS7NFI" }
 		],
 		logo: "mh_world_logo.png"
 	}],
