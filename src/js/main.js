@@ -154,7 +154,10 @@ var games_list = {
 		"videos": [
 			{ video_id: "Ro6r15wzp2o" },
 			{ video_id: "ULqY6yXn2S4" },
-			{ video_id: "TrZSAKS7NFI" }
+			{ video_id: "xtT5GIViSXo" },
+			{ video_id: "64ql8jQBgsw" },
+			{ video_id: "DW2SAnxOBCM" },
+			{ video_id: "lmwxyM3sPwc" }
 		],
 		logo: "mh_world_logo.png"
 	}],

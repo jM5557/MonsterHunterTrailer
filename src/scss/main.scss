@@ -186,7 +186,7 @@ h2 {
 }
 
 #hero-top {
-	background: url($bg + 'monster_hunter_xx.jpg') no-repeat center center;
+	background: url($bg + 'header-top-bg.jpg') no-repeat center center;
 	background-size: cover;
 	padding: 20vw 0;
 	color: #fff;
@@ -206,8 +206,8 @@ h2 {
 
 footer {
 	padding: 2.5rem 1.10rem;
-	background: url($bg + 'footer_bg.jpg') no-repeat center center;
-	background-size: cover;
+	background: url($bg + 'footer-bottom-bg.png') no-repeat center bottom 0px;
+	background-size: auto auto;
 	color: #fff;
 
 	@include opaqueOverlay(0.45);
@@ -326,10 +326,11 @@ footer {
 	}
 
 	#sidebar {
-		max-height: 90px;
+		max-height: 150px;
 
 		ul .menu_game img {
-			width: 80px;
+			width: auto;
+			max-height: 100px;
 		}
 	}
 }
