@@ -136,17 +136,17 @@ var games_list = {
 		logo: "mh_x_logo.png"
 	},
 	{
-		name: "Monster Hunter XX",
+		name: "Monster Hunter Generations Ultimate",
 		backgrounds: "monster_hunter_xx.jpg",
 		"videos": [
 			{ video_id: "5VV5-opm1TE" },
 			{ video_id: "XiOBszkWCp0" },
 			{ video_id: "MnpNGzNoOY0" },
 			{ video_id: "dtxYlOPAutE" },
-			{ video_id: "30ikOWOgUvY" },
-
+			{ video_id: "8VwV3lK4RVU" },
+			{ video_id: "30ikOWOgUvY" }
 		],
-		logo: "mh_xx_logo.png",
+		logo: "mh_gu_logo.png",
 	},
 	{
 		name: "Monster Hunter: World",
